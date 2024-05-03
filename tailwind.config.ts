@@ -1,13 +1,13 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -53,6 +53,17 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      fontSize: {
+        sm: "clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem)",
+        base: "clamp(1rem, 0.34vi + 0.91rem, 1.19rem)",
+        lg: "clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem)",
+        xl: "clamp(1.56rem, 1vi + 1.31rem, 2.11rem)",
+        "2xl": "clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem)",
+        "3xl": "clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem)",
+        "4xl": "clamp(3.05rem, 3.54vi + 2.17rem, 5rem)",
+        "5xl": "clamp(3.81rem, 5.18vi + 2.52rem, 6.66rem)",
+        "6xl": "clamp(4.77rem, 7.48vi + 2.9rem, 8.88rem)",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -75,6 +86,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
